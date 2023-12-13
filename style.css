@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-mario {
+    width: 300px;
+}
+
+.imagem-mario-luigi {
+    height: 600px;
+}
+
+.caixa-principal {
+    width: 40%;
+}
+
+
+
+.video-mario {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.mascara-video {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+p {
+    color: white;
+    margin-top: 10px;
+    font-size: 24px;
+    right: 100px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    background: #C51111;
+    border: none;
+    border-radius: 10px;
+    color: #FFFF;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.fale-conosco {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    position: fixed;
+    left: -320px;
+    transition: left 1s linear;
+    z-index: 4;
+    max-width: 350px;
+}
+
+input {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 1px solid gray;
+    padding-left: 10px;
+    outline-color: rgb(0, 156, 83);
+}
+
+textarea {
+    height: 90px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding: 10px;
+    outline-color: rgb(0, 156, 83);
+}
+
+.mascara-form {
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.button-form {
+    width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .logo-mario {
+        width: 100%;
+        max-width: 200%;
+    }
+
+    .caixa-principal {
+        margin-top: 5%;
+        width: 90%;
+    }
+
+    .imagem-mario-luigi {
+        height: auto;
+        max-width: 90%;
+    }
+
+    .mascara-video {
+        position: relative;
+    }
+
+    .mascara-form {
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99), rgba(10, 12, 16, 0.7), rgba(10, 12, 16, 0.99));
+    }
+
+    .video-mario {
+        height: 100vh;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 22px;
+    }
+
+    .fale-conosco {
+        display: flex;
+        position: fixed;
+        z-index: 4;
+        left: -450px;
+        transition: left 1s linear;
+    }
+
+    button {
+        margin-left: 80px;
+    }
+
+    .button-form {
+        margin-left: 6.5px;
+    }
+
+    @media (max-width: 350px) {
+        body {
+            flex-direction: column;
+            height: 90%;
+        }
+
+        .logo-Mario {
+            width: 100%;
+            /* Make the logo take full width */
+            max-width: 200px;
+            /* Limit the maximum width */
+        }
+
+        .caixa-principal {
+            margin-top: 5%;
+            width: 90%;
+            /* Adjust the width for smaller screens */
+        }
+
+        .imagem-mario-luigi {
+            height: auto;
+            /* Allow the image to scale proportionally */
+            max-width: 80%;
+            /* Make sure the image doesn't exceed its container */
+        }
+
+        .mascara-form {
+            background: linear-gradient(109deg, rgba(10, 12, 16, 0.99), rgba(10, 12, 16, 0.7), rgba(10, 12, 16, 0.99));
+        }
+
+        video {
+            height: 100vh;
+            /* Allow the video to scale proportionally */
+        }
+
+        p {
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .fale-conosco {
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+    }
+}
